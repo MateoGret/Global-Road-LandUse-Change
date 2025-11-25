@@ -43,10 +43,11 @@ knitr::include_graphics("../figs/facet_change_vs_road.png")
 ```
 # Discussion
 
-
+The results show clear differences in land-use change dynamics across the three regions. In Kazakhstan, built-up expansion between 1992 and 2010 remained very limited and is only weakly related to road density. This contrasts with the Cerrado, where moderate built-up growth appears in areas with higher road accessibility, reflecting agricultural and infrastructural development. Borneo shows the strongest relationship between road density and land-use change, which is consistent with previous findings linking new roads to deforestation and settlement expansion. The patterns suggest that roads act as an enabling factor, but their influence depends strongly on regional socio-economic contexts. Overall, built-up change is highest in regions undergoing rapid economic transformation, while sparsely populated areas remain largely unaffected despite road networks.
 
 # Conclusion
 
+This study demonstrates that road density can help explain differences in land-use change across contrasting world regions. While Kazakhstan remains largely stable, the Cerrado and Borneo show stronger links between accessibility and built-up expansion. The results highlight how infrastructure development can accelerate land-use change, especially in regions experiencing economic or agricultural growth. Understanding these patterns is essential for planning sustainable road networks and mitigating environmental impacts.
 
 # References
 
