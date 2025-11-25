@@ -1,30 +1,52 @@
----
-title: "Roads and Land Use Change Report"
-author: "Mateo"
-date: "2025-11-19"
-output: html_document
----
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+title: "Global Effects of Road Development on Land-Use Change"
+author: "Mateo Gret"
+
+
+
+# Introduction
+
+This project examines how land-use change between 1992 and 2010 is spatially associated with existing road networks in three contrasting regions: Northern Kazakhstan, the Brazilian Cerrado, and West Kalimantan (Borneo). The goal is to identify whether areas closer to roads show stronger transitions toward human-dominated land uses.
+
+
+# Methods
+
+We used GRIP global road data and built-up area layers from the LULC-cube for the years 1992 and 2010. Three 2°×2° regions (Northern Kazakhstan, Brazilian Cerrado, West Kalimantan) were defined as bounding boxes and used to crop all datasets.
+
+Built-up change was calculated as the difference between 2010 and 1992. Road density was derived from the GRIP dataset and resampled to match the land-use grid. For each region, we combined both datasets into a common table containing built-up change, road density, and cell coordinates. These values were used to examine spatial relationships between roads and land-use change.
+
+# Results
+
+## Summary statistics
+
+To compare the three regions, we calculated the mean built-up change and mean road density for each area. The summary table shows clear differences in both the magnitude of land-use change and the intensity of road infrastructure.
+
+```{r, echo=TRUE}
+summary_stats <- read.csv("../figs/summary_stats_regions.csv")
+```
+## Built-up change vs. road density
+
+```{r, echo=FALSE, out.width='80%'}
+knitr::include_graphics("../figs/scatter_change_vs_road.png")
 ```
 
-## R Markdown
+## Distribution of land-use change by region
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
+```{r, echo=FALSE, out.width='70%'}
+knitr::include_graphics("../figs/boxplot_change_by_region.png")
 ```
 
-## Including Plots
+## Regional patterns
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r, echo=FALSE, out.width='80%'}
+knitr::include_graphics("../figs/facet_change_vs_road.png")
 ```
+# Discussion
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+# Conclusion
+
+
+# References
+

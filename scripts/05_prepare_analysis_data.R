@@ -89,3 +89,4 @@ write.csv(all_df, out_file_all, row.names = FALSE)
 
 message("🎉 05_prepare_analysis_data.R – alle Regionen verarbeitet.")
 message("  ✔ Kombinierte Datei: ", out_file_all)
+
