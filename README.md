@@ -2,6 +2,18 @@
 
 This repository contains the full workflow and final report for the project analysing how road density relates to built-up land-use change between 1992 and 2010. Three regions are studied: Northern Kazakhstan, the Brazilian Cerrado, and West Kalimantan (Borneo).
 
+## Data
+
+The following datasets were obtained from external sources and are stored in `data_raw/`.
+
+### Land-use (Built-up)
+- Esch et al., 2012 – Global Urban Footprint (1992)
+- Esch et al., 2020 – Global Urban Footprint / World Settlement Footprint (2010)
+
+### Road density (GRIP)
+- Meijer et al., 2018 – Global Road Inventory Project 
+
+
 ## Repository structure
 - data_raw/ – original input data  
 - data_processed/ – cropped regions and processed tables  
