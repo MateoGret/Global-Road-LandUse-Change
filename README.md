@@ -17,6 +17,12 @@ This repository contains the full workflow and final report for the project anal
 5. Create plots and summary statistics  
 6. Compile final report
 
+
+## Outputs
+- Figures in `figs/`  
+- Processed data in `data_processed/`  
+- Full report in `vignettes/report.html`
+
 ## Dependencies
 
 Install all required R packages by:
@@ -32,9 +38,3 @@ use_pkgs <- c(
 
 new_pkgs <- use_pkgs[!(use_pkgs %in% installed.packages()[, "Package"])]
 if (length(new_pkgs) > 0) install.packages(new_pkgs)
-
-## Outputs
-- Figures in `figs/`  
-- Processed data in `data_processed/`  
-- Full report in `vignettes/report.html`
-
