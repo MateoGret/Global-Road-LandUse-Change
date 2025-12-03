@@ -18,24 +18,18 @@ This repository contains the full workflow and final report for the project anal
 6. Compile final report
 
 ## Dependencies
+
+Install all required R packages by:
+
+```r
 use_pkgs <- c(
-  "tidyverse",
+  "sf",
+  "terra",
   "dplyr",
   "purrr",
-  "readr",
-  "tibble",
-  "terra",
-  "sf",
-  "exactextractr",
-  "janitor",
-  "here",
-  "ggplot2",
-  "ggthemes",
-  "knitr",
-  "rmarkdown"
+  "ggplot2"
 )
 
-# Install missing packages
 new_pkgs <- use_pkgs[!(use_pkgs %in% installed.packages()[, "Package"])]
 if (length(new_pkgs) > 0) install.packages(new_pkgs)
 
