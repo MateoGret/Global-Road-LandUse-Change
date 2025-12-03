@@ -17,6 +17,28 @@ This repository contains the full workflow and final report for the project anal
 5. Create plots and summary statistics  
 6. Compile final report
 
+## Dependencies
+use_pkgs <- c(
+  "tidyverse",
+  "dplyr",
+  "purrr",
+  "readr",
+  "tibble",
+  "terra",
+  "sf",
+  "exactextractr",
+  "janitor",
+  "here",
+  "ggplot2",
+  "ggthemes",
+  "knitr",
+  "rmarkdown"
+)
+
+# Install missing packages
+new_pkgs <- use_pkgs[!(use_pkgs %in% installed.packages()[, "Package"])]
+if (length(new_pkgs) > 0) install.packages(new_pkgs)
+
 ## Outputs
 - Figures in `figs/`  
 - Processed data in `data_processed/`  
