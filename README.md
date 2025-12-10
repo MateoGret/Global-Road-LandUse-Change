@@ -30,16 +30,26 @@ The following datasets were obtained from external sources and are stored in `da
 6. Compile final report
 
 ## How to Reproduce
-i. Clone or download the project
-git clone https://github.com/MateoGret/Global-Road-LandUse-Change.git
-ii. Install required R packages
-install.packages(c("tidyverse", "terra", "sf", "here", "ggplot2", "dplyr"))
-iii. Download the required datasets (data_raw/README.md)
-iv. Download the required datasets
-(01_load_and_prepare_data.R, ... ,06_analysis)
-v. Generated outputs
-fig/ 
-analysis/ 
+i. Clone or download the project  
+   git clone https://github.com/MateoGret/Global-Road-LandUse-Change.git  
+
+ii. Install required R packages  
+   install.packages(c("tidyverse", "terra", "sf", "here", "ggplot2", "dplyr"))  
+
+iii. Download the required datasets  
+   (see data_raw/README.md for links and instructions)  
+
+iv. Run the analysis scripts in order  
+   01_load_and_prepare_data.R  
+   02_compute_landuse_change.R  
+   03_merge_datasets.R  
+   04_analyze_relationships.R  
+   05_generate_plots.R  
+   06_analysis.R  
+
+v. Generated outputs  
+   fig/  
+   analysis/  
 
 
 ## Outputs
