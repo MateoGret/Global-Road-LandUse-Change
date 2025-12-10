@@ -29,6 +29,18 @@ The following datasets were obtained from external sources and are stored in `da
 5. Create plots and summary statistics  
 6. Compile final report
 
+## How to Reproduce
+i. Clone or download the project
+git clone https://github.com/MateoGret/Global-Road-LandUse-Change.git
+ii. Install required R packages
+install.packages(c("tidyverse", "terra", "sf", "here", "ggplot2", "dplyr"))
+iii. Download the required datasets (data_raw/README.md)
+iv. Download the required datasets
+(01_load_and_prepare_data.R, ... ,06_analysis)
+v. Generated outputs
+fig/ 
+analysis/ 
+
 
 ## Outputs
 - Figures in `figs/`  
