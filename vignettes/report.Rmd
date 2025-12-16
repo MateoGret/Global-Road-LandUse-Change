@@ -6,6 +6,8 @@ author: "Mateo Gret"
 
 # Introduction
 
+Global road networks are projected to expand by more than 25 million additional paved lane-kilometers by 2050.(Dulac, 2013). Although roads and mobility generate socio-economic benefits, roads also have numerous negative impacts on the environment, ecology, climate and human health and well-being. In particular, research has showed that “the first cut is the deepest”, meaning that the first roads in environmental intact areas are triggering a huge number of environmental problems (Laurance et al., 2009, Laurance et al., 2017). Research has, however, mostly focused on specific interactions, e.g. between road development and deforestation (Kleinschroth and Healey, 2017) or on road development and settlement expansion (Veglio et al., 2025), and has not investigated the effects of roads on land use changes at the global scale.
+
 This project examines how land-use change between 1992 and 2010 is spatially associated with existing road networks in three contrasting regions: Northern Kazakhstan, the Brazilian Cerrado, and West Kalimantan (Borneo). The goal is to identify whether areas closer to roads show stronger transitions toward human-dominated land uses.
 
 
@@ -41,6 +43,7 @@ knitr::include_graphics("../figs/boxplot_change_by_region.png")
 ```{r, echo=FALSE, out.width='80%'}
 knitr::include_graphics("../figs/facet_change_vs_road.png")
 ```
+
 # Discussion
 
 Kazakhstan:The figures show almost no built-up change in Kazakhstan: the boxplot values cluster near zero, and the scatterplots place nearly all points low on the y-axis. Although the trend line shows a clear positive relationship between road density and built-up change, the absolute changes are minimal. This aligns with the post-Soviet context: population decline, rural out-migration, and widespread abandonment of agricultural land reduced development pressure. As a result, even well-connected areas experienced little land-use change.
