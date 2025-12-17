@@ -13,9 +13,15 @@ This project examines how land-use change between 1992 and 2010 is spatially ass
 
 # Methods
 
-We used GRIP global road data and built-up area layers from the LULC-cube for the years 1992 and 2010. Three 2°×2° regions (Northern Kazakhstan, Brazilian Cerrado, West Kalimantan) were defined as bounding boxes and used to crop all datasets.
+The methodological approach combines global road infrastructure data with land-use information to explore spatial relationships between roads and land-use change.
 
-Built-up change was calculated as the difference between 2010 and 1992. Road density was derived from the GRIP dataset and resampled to match the land-use grid. For each region, we combined both datasets into a common table containing built-up change, road density, and cell coordinates. These values were used to examine spatial relationships between roads and land-use change.
+First, global land-use data for the years 1992 and 2010 were used to quantify land-use change. For each grid cell, changes in land use between the two time points were calculated. To simplify the analysis and reduce complexity, the original land-use classes were reclassified into two broad categories: used land, including cropland and built-up areas, and unused land, including forests and natural vegetation. This binary classification highlights transitions from natural to human-modified land.
+
+In parallel, road infrastructure variables were derived from the GRIP global road dataset. For each 1 km grid cell, road density was calculated as the total length of roads per unit area. This variable represents the spatial intensity of road infrastructure.
+
+Land-use change metrics and road density were then spatially combined at the grid-cell level. All datasets were cropped to three 2°×2° study regions—Northern Kazakhstan, the Brazilian Cerrado, and West Kalimantan in Borneo—to ensure comparability across contrasting socio-ecological contexts.
+
+Finally, the spatial relationship between road density and land-use change was examined using descriptive and correlation-based analyses. The objective was not to identify causal effects, but to reveal broad spatial patterns and regional differences in how land-use change relates to road density.
 
 # Results
 
@@ -46,16 +52,21 @@ knitr::include_graphics("../figs/facet_change_vs_road.png")
 
 # Discussion
 
-Kazakhstan:The figures show almost no built-up change in Kazakhstan: the boxplot values cluster near zero, and the scatterplots place nearly all points low on the y-axis. Although the trend line shows a clear positive relationship between road density and built-up change, the absolute changes are minimal. This aligns with the post-Soviet context: population decline, rural out-migration, and widespread abandonment of agricultural land reduced development pressure. As a result, even well-connected areas experienced little land-use change.
-Cerrado:Moderate increases in built-up area occur mainly in well-connected locations. This matches the region’s rapid agricultural expansion, where road improvements support agribusiness, settlement growth, and infrastructure development at the frontier.
+The figures show that built-up change in Kazakhstan is almost negligible. The boxplot values cluster close to zero, and in the scatterplots nearly all points are located near the lower end of the y-axis. Although the trend line indicates a clear positive relationship between road density and built-up change, the absolute magnitude of change remains very small. This pattern is consistent with the post-Soviet context of the region, where population decline, rural out-migration, and the widespread abandonment of agricultural land have reduced overall development pressure. As a result, even areas with relatively high road density exhibit little observable land-use change.
 
-Borneo:Borneo shows the strongest land-use changes. The boxplots contain several high outliers, and the scatterplots show many points high on the y-axis, indicating substantial built-up increases. This matches well-documented patterns in the region: new roads open intact tropical forests for logging, plantations, and settlements. Dense vegetation combined with strong economic incentives leads to rapid land conversion once accessibility improves.
+In the Brazilian Cerrado, the figures indicate moderate increases in built-up areas, particularly in locations with higher road density. This is visible in the boxplots, which show higher values compared to Kazakhstan, as well as in the scatterplots, where a slight upward trend can be observed. These patterns align well with real-world processes in the region, where rapid agricultural expansion and continued investment in infrastructure have made accessibility a key factor driving settlement growth and land conversion. Roads play a central role in enabling agribusiness expansion and the development of associated built-up areas at the agricultural frontier.
 
-Cerrado:The figures display moderate built-up increases in the Cerrado, visible as higher boxplot values and a slight upward trend in the scatterplots. Built-up expansion occurs mainly where road density is higher. This reflects real conditions in the region: rapid agricultural growth and infrastructure investment have made accessibility a key driver of settlement and land conversion. Roads enable the expansion of agribusiness and associated built-up development.
+The strongest land-use changes are observed in West Kalimantan on Borneo. Here, the boxplots contain several high outliers, and the scatterplots display many points at higher values on the y-axis, indicating substantial increases in built-up areas. This pattern reflects well-documented processes in the region, where new roads open up previously intact tropical forests to logging, plantation development, and settlement expansion. In combination with dense natural vegetation and strong economic incentives, improved accessibility leads to rapid land conversion once road infrastructure is established
 
 # Conclusion
 
-Across the three regions, road density proves to be a useful indicator of where land-use change is likely to occur, but its influence depends strongly on regional development dynamics. Kazakhstan shows minimal change despite clear statistical trends, reflecting low demographic and economic pressure. In contrast, the Cerrado demonstrates moderate built-up growth in road-accessible areas due to expanding agriculture and infrastructure. Borneo exhibits the strongest transformation, where new roads rapidly trigger forest conversion and settlement expansion.Overall, the results show a clear relationship between road density and land-use change. Across all three figures, built-up growth remains low in most areas, but increases consistently in cells with higher road accessibility. The boxplots demonstrate regional differences in the magnitude of change, while the scatterplots reveal a positive trend between road density and built-up expansion. These findings underline that roads can drive land-use change, especially where economic or demographic pressures support development.
+Across the three regions, road density proves to be a useful indicator of where land-use change is likely to occur, although its influence depends strongly on regional development dynamics. In Northern Kazakhstan, land-use change remains minimal despite the presence of a clear statistical relationship between road density and built-up change. This pattern reflects the region’s low demographic pressure and limited economic growth, which reduce incentives for large-scale development even in well-connected areas.
+
+In contrast, the Brazilian Cerrado shows moderate increases in built-up areas, particularly in locations with higher road density. This pattern is consistent with the region’s ongoing agricultural expansion, where investments in road infrastructure facilitate agribusiness development, settlement growth, and associated land-use change.
+
+The strongest transformation is observed in West Kalimantan, Borneo. Here, high road density is closely associated with substantial increases in built-up areas. New roads rapidly improve accessibility to previously intact tropical forests, creating conditions that favor logging, plantation expansion, and settlement development.
+
+Overall, the results demonstrate a clear and consistent relationship between road density and land-use change across all three study regions. While built-up growth remains low in most grid cells, it increases systematically in areas with higher road density. The boxplots highlight pronounced regional differences in the magnitude of change, whereas the scatterplots reveal a positive trend between road density and built-up expansion. Together, these findings underline that roads can act as powerful drivers of land-use change, particularly in regions where economic or demographic pressures support development processes.
 
 # References
 Data Sources:
@@ -70,37 +81,30 @@ LUIcube – Land-use Layer Descriptions (Table 6)
 Nature Portfolio. (2025). Description of land-use classes and layers (Table 6).
 https://www.nature.com/articles/s41597-025-04788-1/tables/6
 
-Research articels:
+Peer-reviewed articles
 
 Dulac, J. (2013). Estimating road and railway infrastructure capacity and costs to 2050. International Energy Agency.
 https://www.iea.org/reports/transport-infrastructure-insights
 
-Laurance, W. F., Goosem, M., & Laurance, S. G. W. (2019). Impacts of linear clearings. Smithsonian Institution.
-https://repository.si.edu/server/api/core/bitstreams/2abb548b-2ea5-4727-a46c-4a6af17e36fc/content
+Laurance, W. F., Goosem, M., & Laurance, S. G. W. (2019). Impacts of linear clearings. Smithsonian Institution. https://repository.si.edu/server/api/core/bitstreams/2abb548b-2ea5-4727-a46c-4a6af17e36fc/content
 
-Kleinschroth, F., & Healey, J. R. (2017). Impacts of logging roads on tropical forests. Biotropica, 49(5), 620–628.
-https://doi.org/10.1111/btp.12423
+Kleinschroth, F., & Healey, J. R. (2017). Impacts of logging roads on tropical forests. Biotropica, 49(5), 620–628. https://doi.org/10.1111/btp.12423
 
-Laurance, W. F., Clements, G. R., Sloan, S., O’Connell, C. S., Mueller, N. D., Goosem, M., Venter, O., Edwards, D. P., Phalan, B., Balmford, A., Van Der Ree, R., & Arrea, I. B. (2014). A global strategy for road building. Nature, 513(7517), 229–232.
-https://doi.org/10.1038/nature13717
+Laurance, W. F., Clements, G. R., Sloan, S., O’Connell, C. S., Mueller, N. D., Goosem, M., Venter, O., Edwards, D. P., Phalan, B., Balmford, A., Van Der Ree, R., & Arrea, I. B. (2014). A global strategy for road building. Nature, 513(7517), 229–232. https://doi.org/10.1038/nature13717
 
-Veglio, F., Stanek, M., & Brenner, N. (2025). A dialogue on global infrastructure-led urbanization: Concepts and reorientations. Environment and Planning D: Society and Space.
-https://journals.sagepub.com/home/epd
+Veglio, F., Stanek, M., & Brenner, N. (2025). A dialogue on global infrastructure-led urbanization: Concepts and reorientations. Environment and Planning D: Society and Space. https://journals.sagepub.com/home/epd
 
-Meijers, E., Smits, J., & Van Eupen, M. (2018). Global patterns of current and future road infrastructure. Environmental Research Letters, 13(6), Article 064011.
-https://doi.org/10.1088/1748-9326/aabd42
+Meijers, E., Smits, J., & Van Eupen, M. (2018). Global patterns of current and future road infrastructure. Environmental Research Letters, 13(6), Article 064011. https://doi.org/10.1088/1748-9326/aabd42
 
-Matej, B., et al. (2025). A global land-use data cube 1992–2020 based on the Human Appropriation of Net Primary Production. Scientific Data.
-https://www.nature.com/sdata/
+Matej, B., et al. (2025). A global land-use data cube 1992–2020 based on the Human Appropriation of Net Primary Production. Scientific Data. https://www.nature.com/sdata/
 
-WWF. (o. J.). Green Economy im Herzen Borneos. WWF Deutschland. https://www.wwf.de/themen-projekte/landwirtschaft/nachhaltige-landwirtschaftliche-anbausysteme/green-economy-im-herzen-borneos
+WWF (2025). Green Economy im Herzen Borneos. WWF Deutschland. https://www.wwf.de/themen-projekte/landwirtschaft/nachhaltige-landwirtschaftliche-anbausysteme/green-economy-im-herzen-borneos
 
-Open-Access-Journal Article
 Alipbeki, O., et al. (2020). A case study of Arshaly district, Kazakhstan. Sustainability, 12(4), 1556. https://doi.org/10.3390/su12041556
 
 Seitkazy, M., Beisekenov, N., Taukebayev, O., Zulpykharov, K., Tokbergenova, A., Duisenbayev, S., Sarybaev, E., & Turymtayev, Z. (2024). Forecasting land use dynamics in Talas District, Kazakhstan, using Landsat data and the Google Earth Engine (GEE) platform. Sustainability, 16(14), 6144. https://doi.org/10.3390/su16146144
 
-AI:
+AI disclaimer
 
 OpenAI. (2024). ChatGPT . https://chat.openai.com
 
